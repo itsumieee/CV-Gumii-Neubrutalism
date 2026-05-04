@@ -1398,6 +1398,174 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        /* Hero Visual Elements - Tailor & Design Theme */
+.hero-elements-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-main-element {
+    width: clamp(200px, 35vw, 300px);
+    height: clamp(200px, 35vw, 300px);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(4rem, 10vw, 6rem);
+    color: white;
+    animation: morphing 8s ease-in-out infinite;
+    box-shadow: 0 20px 60px var(--primary-glow);
+    z-index: 1;
+    position: relative;
+}
+
+.hero-element-icon {
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Floating Elements Around */
+.hero-float-element {
+    position: absolute;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: clamp(12px, 3vw, 20px);
+    padding: clamp(15px, 3vw, 25px);
+    box-shadow: var(--glass-shadow);
+    animation: floatElement 6s ease-in-out infinite;
+    text-align: center;
+    min-width: clamp(100px, 18vw, 140px);
+}
+
+.hero-float-element-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0s;
+}
+
+.hero-float-element-2 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    animation-delay: -2s;
+}
+
+.hero-float-element-3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: -4s;
+}
+
+.hero-float-element-4 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-delay: -1s;
+}
+
+.hero-float-icon {
+    width: clamp(40px, 8vw, 60px);
+    height: clamp(40px, 8vw, 60px);
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 0 auto 10px;
+    color: white;
+}
+
+.hero-float-label {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    font-weight: 600;
+    color: var(--light);
+}
+
+@keyframes floatElement {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* Decorative Elements */
+.hero-decoration {
+    position: absolute;
+    opacity: 0.6;
+    animation: decorRotate 20s linear infinite;
+}
+
+.hero-decor-1 {
+    top: 10%;
+    right: 10%;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--primary-light);
+    animation-delay: 0s;
+}
+
+.hero-decor-2 {
+    bottom: 15%;
+    left: 5%;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--accent);
+    animation-delay: -5s;
+    animation-direction: reverse;
+}
+
+.hero-decor-3 {
+    top: 60%;
+    right: 5%;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--primary-light);
+    animation-delay: -10s;
+}
+
+@keyframes decorRotate {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Thread Lines Animation */
+.thread-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+    height: 2px;
+    opacity: 0.3;
+    animation: threadMove 4s ease-in-out infinite;
+}
+
+.thread-1 {
+    width: 100px;
+    top: 20%;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.thread-2 {
+    width: 80px;
+    bottom: 30%;
+    right: -40px;
+    animation-delay: -2s;
+}
+
+@keyframes threadMove {
+    0%, 100% { transform: translateX(0); opacity: 0.3; }
+    50% { transform: translateX(20px); opacity: 0.6; }
+}
+
     </style>
 </head>
 <body>
@@ -1490,26 +1658,69 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-image-wrapper">
-                    <div class="hero-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="floating-card floating-card-1">
-                        <div class="floating-card-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="floating-card-text">Web Design</div>
-                        <div class="floating-card-subtext">Creative</div>
-                    </div>
-                    <div class="floating-card floating-card-2">
-                        <div class="floating-card-icon">
-                            <i class="fas fa-scissors"></i>
-                        </div>
-                        <div class="floating-card-text">Tailor</div>
-                        <div class="floating-card-subtext">Professional</div>
-                    </div>
-                </div>
+    <div class="hero-image-wrapper">
+        <div class="hero-elements-container">
+            <!-- Main Element - Sewing Machine -->
+            <div class="hero-main-element">
+                <i class="fas fa-tshirt hero-element-icon"></i>
             </div>
+            
+            <!-- Floating Elements -->
+            <div class="hero-float-element hero-float-element-1">
+                <div class="hero-float-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="hero-float-label">Web Dev</div>
+            </div>
+            
+            <div class="hero-float-element hero-float-element-2">
+                <div class="hero-float-icon">
+                    <i class="fas fa-scissors"></i>
+                </div>
+                <div class="hero-float-label">Tailor</div>
+            </div>
+            
+            <div class="hero-float-element hero-float-element-3">
+                <div class="hero-float-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="hero-float-label">Design</div>
+            </div>
+            
+            <div class="hero-float-element hero-float-element-4">
+                <div class="hero-float-icon">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <div class="hero-float-label">Creative</div>
+            </div>
+            
+            <!-- Decorative Icons -->
+            <i class="fas fa-crosshairs hero-decoration hero-decor-1"></i>
+            <i class="fas fa-star hero-decoration hero-decor-2"></i>
+            <i class="fas fa-bolt hero-decoration hero-decor-3"></i>
+            
+            <!-- Thread Lines -->
+            <div class="thread-line thread-1"></div>
+            <div class="thread-line thread-2"></div>
+        </div>
+        
+        <!-- Keep Original Floating Cards -->
+        <div class="floating-card floating-card-1">
+            <div class="floating-card-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="floating-card-text">Web Design</div>
+            <div class="floating-card-subtext">Creative</div>
+        </div>
+        <div class="floating-card floating-card-2">
+            <div class="floating-card-icon">
+                <i class="fas fa-cut"></i>
+            </div>
+            <div class="floating-card-text">Tailor</div>
+            <div class="floating-card-subtext">Professional</div>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -1530,12 +1741,9 @@
         <div class="about-grid">
             <div class="about-image reveal">
                 <div class="about-image-wrapper">
-                    <div class="about-placeholder">
-                        <div class="about-placeholder-icon">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                        <div class="about-placeholder-text">Your Photo Here</div>
-                    </div>
+                    <img src="https://i.ibb.co.com/Xx0fWNHN/foto-profile.jpg" 
+                         alt="Sumiee Gumiee" 
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; aspect-ratio: 4/5;">
                 </div>
             </div>
             <div class="about-content reveal">
@@ -1599,16 +1807,16 @@
         <div class="designs-grid">
             <div class="design-card reveal">
                 <div class="design-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="E-Commerce Design">
+                    <img src="https://i.ibb.co.com/XZ2pC7Vm/download-18.jpg" alt="E-Commerce Design">
                     <div class="design-overlay">
                         <a href="#" class="design-overlay-btn"><i class="fas fa-link"></i></a>
                         <a href="#" class="design-overlay-btn"><i class="fas fa-search-plus"></i></a>
                     </div>
                 </div>
                 <div class="design-content">
-                    <div class="design-category">E-Commerce</div>
-                    <h3 class="design-title">Fashion Store Website</h3>
-                    <p class="design-description">Website toko online fashion dengan desain modern dan fitur lengkap</p>
+                    <div class="design-category">Design Fashion</div>
+                    <h3 class="design-title">Gothic Anime Cross Off-Shoulder Tee</h3>
+                    <p class="design-description">Kaos putih model sabrina (off-shoulder) dengan sentuhan gaya grunge dan estetik gotik. Menampilkan print grafis karakter manga bergaya gotik di bagian depan. Dipercantik dengan detail tali halter hitam yang menyatu dan aksen kalung salib perak, memberikan kesan berlapis (layered) yang berani dan berbeda. Cocok untuk tampilan streetwear yang unik dan berkarakter.</p>
                     <div class="design-tags">
                         <span class="design-tag">HTML/CSS</span>
                         <span class="design-tag">JavaScript</span>
@@ -1617,8 +1825,8 @@
                 </div>
             </div>
             <div class="design-card reveal">
-                <div class="design-image">
-                    <img src="https://ibb.co.com/N2DgFQRQ" alt="Restaurant Design">
+                <div class="design-imgage">
+                    <img src="https://i.ibb.co.com/Q32svzQm/1777875964.png" alt="Restaurant Design">
                     <div class="design-overlay">
                         <a href="#" class="design-overlay-btn"><i class="fas fa-link"></i></a>
                         <a href="#" class="design-overlay-btn"><i class="fas fa-search-plus"></i></a>
@@ -1654,7 +1862,7 @@
             </div>
             <div class="design-card reveal">
                 <div class="design-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Mobile App Design">
+                    <img src="https://i.ibb.co.com/DPD5gKys/1777876126.png" alt="Mobile App Design">
                     <div class="design-overlay">
                         <a href="#" class="design-overlay-btn"><i class="fas fa-link"></i></a>
                         <a href="#" class="design-overlay-btn"><i class="fas fa-search-plus"></i></a>
@@ -1672,7 +1880,7 @@
             </div>
             <div class="design-card reveal">
                 <div class="design-image">
-                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&q=80" alt="Branding Design">
+                    <img src="https://i.ibb.co.com/RGy06zXT/1777876607.png" alt="Branding Design">
                     <div class="design-overlay">
                         <a href="#" class="design-overlay-btn"><i class="fas fa-link"></i></a>
                         <a href="#" class="design-overlay-btn"><i class="fas fa-search-plus"></i></a>
