@@ -151,6 +151,20 @@
             color: var(--hot-pink);
         }
 
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: var(--shadow-offset), 0 0 0 0 rgba(255, 60, 172, 0.7); }
+            50% { box-shadow: var(--shadow-offset), 0 0 0 10px rgba(255, 60, 172, 0); }
+        }
+
+        .btn-submit.sending {
+            animation: pulse-glow 1.5s infinite;
+        }
+
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -186,6 +200,12 @@
             text-decoration: none;
             color: var(--dark);
             position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
 
         .nav-logo::after {
@@ -2156,12 +2176,12 @@
         <div class="testimonials-grid stagger">
             <div class="testimonial-card">
                 <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Gumii adalah developer yang luar biasa! Website yang dibuat sangat responsif dan loading speed cepat. Recommended banget!"</p>
+                <p class="testimonial-text">"Kolaborasi dengan Gumii sangat profesional dan tepat deadline. Hasilnya melampaui ekspektasi kami. Highly recommended untuk project apapun!"</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar">👨</div>
+                    <div class="testimonial-avatar">🏢</div>
                     <div class="testimonial-info">
-                        <h4>Ahmad Reza</h4>
-                        <p>CEO Tech Startup</p>
+                        <h4>Jangfan Testing Komden</h4>
+                        <p>Project Manager</p>
                     </div>
                 </div>
             </div>
@@ -2358,7 +2378,7 @@
                     <label>Message</label>
                     <textarea name="message" placeholder="Tulis pesan kamu..." required></textarea>
                 </div>
-                <button type="submit" class="btn-submit">🚀 Kirim Pesan</button>
+                <button type="submit" class="btn-submit" id="submitBtn">🚀 Kirim Pesan</button>
             </form>
         </div>
     </section>
@@ -2531,3 +2551,4 @@
     </script>
 </body>
 </html>
+
