@@ -165,95 +165,6 @@
             animation: pulse-glow 1.5s infinite;
         }
 
-        /* ===== FLOATING ANIMATED ELEMENTS ===== */
-        @keyframes float-up {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
-        }
-
-        @keyframes float-left {
-            0% { transform: translateX(0) translateY(0); opacity: 1; }
-            100% { transform: translateX(-300px) translateY(-600px); opacity: 0; }
-        }
-
-        @keyframes float-right {
-            0% { transform: translateX(0) translateY(0); opacity: 1; }
-            100% { transform: translateX(300px) translateY(-600px); opacity: 0; }
-        }
-
-        @keyframes bob {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes sway {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(2deg); }
-            75% { transform: rotate(-2deg); }
-        }
-
-        .floating-element {
-            position: fixed;
-            pointer-events: none;
-            z-index: 10;
-        }
-
-        .float-particle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 3px solid var(--dark);
-            animation: float-up 8s ease-in forwards;
-        }
-
-        .float-particle.pink {
-            background: var(--hot-pink);
-            box-shadow: 0 0 20px rgba(255, 60, 172, 0.5);
-        }
-
-        .float-particle.yellow {
-            background: var(--neon-yellow);
-            box-shadow: 0 0 20px rgba(255, 230, 0, 0.5);
-        }
-
-        .float-particle.blue {
-            background: var(--electric-blue);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-
-        .float-particle.lime {
-            background: var(--lime-green);
-            box-shadow: 0 0 20px rgba(123, 255, 51, 0.5);
-        }
-
-        .decorated-shape {
-            position: fixed;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .shape-circle {
-            width: 100px;
-            height: 100px;
-            border: 4px solid var(--hot-pink);
-            border-radius: 50%;
-            animation: bob 4s ease-in-out infinite;
-        }
-
-        .shape-square {
-            width: 80px;
-            height: 80px;
-            border: 4px solid var(--electric-blue);
-            animation: sway 3s ease-in-out infinite;
-        }
-
-        .shape-line {
-            width: 150px;
-            height: 4px;
-            background: var(--lime-green);
-            animation: bob 3s ease-in-out infinite;
-        }
-
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -2066,14 +1977,14 @@
     <!-- MARQUEE -->
     <div class="marquee-top" style="margin-top: 72px;">
         <div class="marquee-content">
-            <span>Available for Freelance</span>
-            <span>Full Stack Developer</span>
-            <span>UI/UX Designer</span>
-            <span>Portfolio Developer</span>
-            <span>Available for Freelance</span>
-            <span>Full Stack Developer</span>
-            <span>UI/UX Designer</span>
-            <span>Portfolio Developer</span>
+            <span>Web Developer • Content Creator • UI/UX Designer</span>
+            <span>React • Node.js • Figma • JavaScript</span>
+            <span>Available for Freelance & Collaboration</span>
+            <span>TikTok • Instagram • Discord • YouTube</span>
+            <span>Web Developer • Content Creator • UI/UX Designer</span>
+            <span>React • Node.js • Figma • JavaScript</span>
+            <span>Available for Freelance & Collaboration</span>
+            <span>TikTok • Instagram • Discord • YouTube</span>
         </div>
     </div>
 
@@ -2085,13 +1996,13 @@
                 Available for Hire
             </div>
             <h1 class="hero-title">
-                <span class="line1">Hi, I'm</span>
-                <span class="line2">Zumieee Gumii</span>
-                <span class="line3">Developer</span>
+                <span class="line1">Creative Developer &</span>
+                <span class="line2">Digital Creator</span>
+                <span class="line3">Gumii | Zumi</span>
             </h1>
             <p class="hero-desc">
-                Seorang <strong>Full Stack Developer</strong> & <strong>Content Creator</strong> yang passionate 
-                dalam membangun digital experience yang keren. Juga aktif streaming & bikin konten kreatif di berbagai platform.
+                Full Stack Developer yang passionate dalam membangun digital experience yang memorable. 
+                Aktif di TikTok, Instagram & Discord dengan community 100k+ followers.
             </p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-neu btn-primary">
@@ -2121,38 +2032,36 @@
         <div class="about-grid">
             <div class="about-text reveal-left">
                 <p>
-                    Halo! Saya adalah seorang <strong>Full Stack Developer</strong> dengan pengalaman lebih dari 
-                    <strong>3 tahun</strong> dalam dunia web development. Saya juga seorang <strong>Content Creator</strong> 
-                    yang aktif di TikTok, Instagram, dan Discord.
+                    Halo! Nama saya Gumii (Zumi), seorang <strong>Full Stack Developer</strong> dari Bandung dengan pengalaman 
+                    lebih dari <strong>3 tahun</strong> mengembangkan aplikasi web modern. Saya spesialis dalam React, Node.js, dan desain UI/UX.
                 </p>
                 <br>
                 <p>
-                    Passion saya adalah membangun website yang tidak hanya fungsional tapi juga punya 
-                    <strong>visual yang memukau</strong>. Saya percaya bahwa design yang baik bisa membuat 
-                    pengguna betah berlama-lama di sebuah website.
+                    Passion saya adalah menciptakan produk digital yang tidak hanya <strong>fungsional</strong> tetapi juga memiliki 
+                    <strong>user experience yang luar biasa</strong>. Saya percaya setiap pixel penting dalam memberikan pengalaman terbaik.
                 </p>
                 <br>
                 <p>
-                    Di luar coding, saya juga aktif <strong>live streaming</strong> tentang programming, 
-                    gaming, dan ngobrol santai bareng komunitas. Join Discord saya untuk gabung komunitas!
+                    Selain coding, saya aktif sebagai <strong>Content Creator</strong> di TikTok (@zumieprset), Instagram (@zukimiii__), 
+                    dan Discord. Community saya terdiri dari fellow developers dan tech enthusiasts yang saling belajar dan grow bersama.
                 </p>
             </div>
             <div class="about-stats stagger">
                 <div class="stat-card">
                     <span class="stat-number" data-target="3">0</span>
-                    <span class="stat-label">Tahun Exp</span>
+                    <span class="stat-label">Tahun Experience</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" data-target="50">0</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number" data-target="10">0</span>
-                    <span class="stat-label">K Followers</span>
+                    <span class="stat-number" data-target="60">0</span>
+                    <span class="stat-label">+ Projects Done</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number" data-target="100">0</span>
-                    <span class="stat-label">K Views</span>
+                    <span class="stat-label">K+ Followers</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">K+ Total Views</span>
                 </div>
             </div>
         </div>
@@ -2166,46 +2075,46 @@
         </div>
         <div class="skills-grid stagger">
             <div class="skill-card" data-number="01">
-                <span class="skill-icon">⚡</span>
-                <h3 class="skill-name">HTML & CSS</h3>
-                <p class="skill-desc">Membuat layout responsif dengan teknik modern seperti Grid, Flexbox, dan animasi CSS.</p>
-                <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
-                <div class="skill-percentage">95%</div>
+                <span class="skill-icon">⚛️</span>
+                <h3 class="skill-name">React & Next.js</h3>
+                <p class="skill-desc">Building modern SPAs dengan React hooks, state management, SSR, dan optimization.</p>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+                <div class="skill-percentage">92%</div>
             </div>
             <div class="skill-card" data-number="02">
-                <span class="skill-icon">🟨</span>
-                <h3 class="skill-name">JavaScript</h3>
-                <p class="skill-desc">DOM manipulation, ES6+, async/await, dan berbagai framework modern.</p>
+                <span class="skill-icon">🟢</span>
+                <h3 class="skill-name">Node.js & Express</h3>
+                <p class="skill-desc">Backend development dengan REST API, JWT auth, middleware, dan database management.</p>
                 <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
                 <div class="skill-percentage">88%</div>
             </div>
             <div class="skill-card" data-number="03">
-                <span class="skill-icon">⚛️</span>
-                <h3 class="skill-name">React.js</h3>
-                <p class="skill-desc">Membangun SPA yang interaktif dengan React, hooks, dan state management.</p>
-                <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-                <div class="skill-percentage">85%</div>
-            </div>
-            <div class="skill-card" data-number="04">
-                <span class="skill-icon">🟢</span>
-                <h3 class="skill-name">Node.js</h3>
-                <p class="skill-desc">Backend development dengan Express, REST API, dan database integration.</p>
-                <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
-                <div class="skill-percentage">80%</div>
-            </div>
-            <div class="skill-card" data-number="05">
                 <span class="skill-icon">🎨</span>
                 <h3 class="skill-name">UI/UX Design</h3>
-                <p class="skill-desc">Design interface yang user-friendly menggunakan Figma dan prinsip design thinking.</p>
+                <p class="skill-desc">Figma design, prototyping, user research, dan design system creation.</p>
                 <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
                 <div class="skill-percentage">90%</div>
             </div>
+            <div class="skill-card" data-number="04">
+                <span class="skill-icon">🗄️</span>
+                <h3 class="skill-name">Database Design</h3>
+                <p class="skill-desc">MongoDB, PostgreSQL, Firebase, schema design, dan database optimization.</p>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="87"></div></div>
+                <div class="skill-percentage">87%</div>
+            </div>
+            <div class="skill-card" data-number="05">
+                <span class="skill-icon">⚡</span>
+                <h3 class="skill-name">Frontend Performance</h3>
+                <p class="skill-desc">Optimization, lazy loading, code splitting, responsive design, dan animations.</p>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="91"></div></div>
+                <div class="skill-percentage">91%</div>
+            </div>
             <div class="skill-card" data-number="06">
-                <span class="skill-icon">🎬</span>
-                <h3 class="skill-name">Content Creation</h3>
-                <p class="skill-desc">Video editing, streaming setup, dan content strategy untuk berbagai platform.</p>
-                <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
-                <div class="skill-percentage">92%</div>
+                <span class="skill-icon">🛠️</span>
+                <h3 class="skill-name">DevOps & Tools</h3>
+                <p class="skill-desc">Git, Docker, Vercel, Netlify, deployment, CI/CD, dan development tools.</p>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                <div class="skill-percentage">85%</div>
             </div>
         </div>
     </section>
@@ -2220,36 +2129,194 @@
             <div class="timeline-item reveal">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
-                    <span class="timeline-year">2026 - Present</span>
-                    <h3 class="timeline-role">Senior Web Designer</h3>
-                    <p class="timeline-company">🏢 Creative Design Studio</p>
-                    <p class="timeline-desc">Memimpin tim web design untuk menciptakan interface yang memukau dan user experience terbaik. Fokus pada responsive design dan accessibility.</p>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <span class="timeline-year">2025 - 2026</span>
-                    <h3 class="timeline-role">UI/UX Designer</h3>
-                    <p class="timeline-company">🏢 Digital Design Agency</p>
-                    <p class="timeline-desc">Merancang landing page, dashboard, dan aplikasi web dengan fokus pada estetika modern dan user-centric design. Menggunakan Figma dan design thinking.</p>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <span class="timeline-year">2024 - 2025</span>
-                    <h3 class="timeline-role">Web Designer</h3>
-                    <p class="timeline-company">🏢 Tech Innovation Lab</p>
-                    <p class="timeline-desc">Mengembangkan desain website profesional dengan HTML5, CSS3, dan responsive layouts. Collaborasi dengan developer untuk implementasi sempurna.</p>
+                    <span class="timeline-year">2024 - Present</span>
+                    <h3 class="timeline-role">Full Stack Developer</h3>
+                    <p class="timeline-company">💼 Freelance / Self Employed</p>
+                    <p class="timeline-desc">Mengembangkan aplikasi web full stack untuk klien dengan berbagai industri. Specializing dalam React, Node.js, dan database design. Juga mengelola personal brand & content creation di social media.</p>
                 </div>
             </div>
             <div class="timeline-item reveal">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <span class="timeline-year">2023 - 2024</span>
-                    <h3 class="timeline-role">Freelance Web Designer</h3>
-                    <p class="timeline-company">🏠 Self Employed</p>
+                    <h3 class="timeline-role">Frontend Developer</h3>
+                    <p class="timeline-company">🏢 Digital Agency</p>
+                    <p class="timeline-desc">Mengembangkan responsive website dan web applications menggunakan React dan modern CSS. Collaborate dengan designer untuk implementasi pixel-perfect designs.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2022 - 2023</span>
+                    <h3 class="timeline-role">Junior Web Developer</h3>
+                    <p class="timeline-company">🏢 Tech Startup</p>
+                    <p class="timeline-desc">Memulai journey sebagai developer dengan mempelajari JavaScript, HTML/CSS, dan basic backend. Berkontribusi pada berbagai project feature development dan bug fixes.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2021 - 2022</span>
+                    <h3 class="timeline-role">Self Learning & Content Creator</h3>
+                    <p class="timeline-company">📚 Personal Journey</p>
+                    <p class="timeline-desc">Intensif belajar web development melalui online courses, tutorial, dan project-based learning. Mulai membuat content tentang programming di social media untuk sharing knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials" id="testimonials">
+        <div class="section-header reveal">
+            <div class="section-label">// 004</div>
+            <h2 class="section-title">What Client's <span class="outline">Say</span></h2>
+        </div>
+        <div class="testimonials-grid stagger">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Gumii adalah developer terbaik yang pernah saya kerjakan. Profesional, komunikasi jelas, dan hasil kerjanya exceed expectations. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨‍💼</div>
+                    <div class="testimonial-info">
+                        <h4>Ahmad Sudirman</h4>
+                        <p>CEO Tech Company</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Portfolio website yang dibuat Gumii sangat elegant dan responsive. UX yang intuitif membuat klien saya betah berlama-lama. Worth every penny!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩‍💼</div>
+                    <div class="testimonial-info">
+                        <h4>Silvia Handoko</h4>
+                        <p>Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Kerja sama dengan Gumii sangat smooth. Deadline selalu terpenuhi, code quality tinggi, dan selalu update dengan tech trends terbaru."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨‍💻</div>
+                    <div class="testimonial-info">
+                        <h4>Rizky Pratama</h4>
+                        <p>Founder SaaS Platform</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Best investment untuk website e-commerce kami! Sales meningkat 45% setelah redesign. Gumii truly understands business needs."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩‍🏫</div>
+                    <div class="testimonial-info">
+                        <h4>Nita Wijaya</h4>
+                        <p>E-Commerce Owner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects">
+        <div class="section-header reveal">
+            <div class="section-label">// 005</div>
+            <h2 class="section-title">My <span class="outline">Projects</span></h2>
+        </div>
+        <div class="projects-grid stagger">
+            <div class="project-card">
+                <div class="project-thumb">
+                    💰
+                    <span class="project-tag">Full Stack</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">E-Commerce Dashboard</h3>
+                    <p class="project-desc">Platform e-commerce lengkap dengan admin dashboard, inventory management, dan payment gateway integration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    🎮
+                    <span class="project-tag">Real-time</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Live Stream Management</h3>
+                    <p class="project-desc">Platform streaming dengan real-time chat, analytics viewer, dan monetization dashboard.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    🎨
+                    <span class="project-tag">Design System</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Component Library & Design Kit</h3>
+                    <p class="project-desc">Comprehensive design system dengan reusable components, Figma kit, dan documentation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Storybook</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    📱
+                    <span class="project-tag">Mobile</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Social Media Mobile App</h3>
+                    <p class="project-desc">Cross-platform mobile app dengan feed, stories, DM, dan user engagement features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Redux</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    📊
+                    <span class="project-tag">Analytics</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Data Visualization Dashboard</h3>
+                    <p class="project-desc">Advanced analytics dashboard dengan interactive charts, real-time data, dan export features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    🌐
+                    <span class="project-tag">CMS</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Headless CMS Platform</h3>
+                    <p class="project-desc">Flexible content management system dengan API-first architecture dan multi-language support.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
                     <p class="timeline-desc">Mengerjakan project desain website untuk berbagai client, dari startup hingga perusahaan besar. Spesialisasi dalam branding visual dan modern web design.</p>
                 </div>
             </div>
@@ -2367,12 +2434,12 @@
         <div class="projects-grid stagger">
             <div class="project-card">
                 <div class="project-thumb">
-                    🌐
-                    <span class="project-tag">Web App</span>
+                    💰
+                    <span class="project-tag">Full Stack</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">E-Commerce Platform</h3>
-                    <p class="project-desc">Platform belanja online dengan fitur cart, payment gateway, dan dashboard admin.</p>
+                    <h3 class="project-title">E-Commerce Dashboard</h3>
+                    <p class="project-desc">Platform e-commerce lengkap dengan admin dashboard, inventory management, dan payment gateway integration.</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Node.js</span>
@@ -2383,11 +2450,11 @@
             <div class="project-card">
                 <div class="project-thumb">
                     🎮
-                    <span class="project-tag">Streaming</span>
+                    <span class="project-tag">Real-time</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Stream Dashboard</h3>
-                    <p class="project-desc">Dashboard untuk mengelola live stream, analytics, dan interaksi dengan viewer.</p>
+                    <h3 class="project-title">Live Stream Management</h3>
+                    <p class="project-desc">Platform streaming dengan real-time chat, analytics viewer, dan monetization dashboard.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Next.js</span>
                         <span class="tech-tag">Socket.io</span>
@@ -2397,16 +2464,61 @@
             </div>
             <div class="project-card">
                 <div class="project-thumb">
+                    🎨
+                    <span class="project-tag">Design System</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Component Library & Design Kit</h3>
+                    <p class="project-desc">Comprehensive design system dengan reusable components, Figma kit, dan documentation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Storybook</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
                     📱
                     <span class="project-tag">Mobile</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Social Media App</h3>
-                    <p class="project-desc">Aplikasi social media dengan fitur feed, stories, dan real-time messaging.</p>
+                    <h3 class="project-title">Social Media Mobile App</h3>
+                    <p class="project-desc">Cross-platform mobile app dengan feed, stories, DM, dan user engagement features.</p>
                     <div class="project-tech">
                         <span class="tech-tag">React Native</span>
                         <span class="tech-tag">Firebase</span>
                         <span class="tech-tag">Redux</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    📊
+                    <span class="project-tag">Analytics</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Data Visualization Dashboard</h3>
+                    <p class="project-desc">Advanced analytics dashboard dengan interactive charts, real-time data, dan export features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-thumb">
+                    🌍
+                    <span class="project-tag">CMS</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Headless CMS Platform</h3>
+                    <p class="project-desc">Flexible content management system dengan API-first architecture dan multi-language support.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">PostgreSQL</span>
                     </div>
                 </div>
             </div>
@@ -2611,47 +2723,6 @@
                 btn.style.color = '#1a1a1a';
             });
         }
-
-        // ===== FLOATING PARTICLES ON SCROLL =====
-        const colors = ['pink', 'yellow', 'blue', 'lime'];
-        window.addEventListener('scroll', () => {
-            if (Math.random() > 0.95) {
-                createFloatingParticle();
-            }
-        });
-
-        function createFloatingParticle() {
-            const particle = document.createElement('div');
-            particle.className = 'floating-element';
-            const dot = document.createElement('div');
-            const colorClass = colors[Math.floor(Math.random() * colors.length)];
-            dot.className = 'float-particle ' + colorClass;
-            dot.style.left = Math.random() * window.innerWidth + 'px';
-            dot.style.top = window.innerHeight + 'px';
-            particle.appendChild(dot);
-            document.body.appendChild(particle);
-            setTimeout(() => particle.remove(), 8000);
-        }
-
-        // ===== ADD DECORATIVE SHAPES =====
-        function addDecorativeShapes() {
-            const shapes = [
-                { class: 'shape-circle', top: '10%', right: '5%' },
-                { class: 'shape-square', bottom: '15%', left: '3%' },
-                { class: 'shape-line', top: '50%', right: '2%' }
-            ];
-            shapes.forEach(shape => {
-                const el = document.createElement('div');
-                el.className = 'decorated-shape ' + shape.class;
-                if (shape.top) el.style.top = shape.top;
-                if (shape.bottom) el.style.bottom = shape.bottom;
-                if (shape.left) el.style.left = shape.left;
-                if (shape.right) el.style.right = shape.right;
-                document.body.appendChild(el);
-            });
-        }
-
-        addDecorativeShapes();
 
         // ===== SMOOTH SCROLL FOR NAV LINKS =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
