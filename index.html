@@ -1643,19 +1643,19 @@
                     </a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number" data-count="2">0</div>
-                        <div class="stat-label">Tahun Pengalaman</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" data-count="25">0</div>
-                        <div class="stat-label">Project Selesai</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" data-count="20">0</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                </div>
+    <div class="stat">
+        <div class="stat-number">2+</div>
+        <div class="stat-label">Tahun Pengalaman</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Project Selesai</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Happy Clients</div>
+    </div>
+</div>
             </div>
             <div class="hero-visual">
     <div class="hero-image-wrapper">
@@ -2153,26 +2153,52 @@
             });
         });
 
-        // Counter animation
-        function animateCounters() {
-            document.querySelectorAll('.stat-number').forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-count'));
-                const duration = 2000;
-                const step = target / (duration / 16);
-                let current = 0;
+        // Counter animation - FIXED
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.ceil(current) + '+';
+                setTimeout(updateCounter, 16);
+            } else {
+                counter.textContent = target + '+';
+            }
+        };
+        
+        updateCounter();
+    });
+}
 
-                const updateCounter = () => {
-                    current += step;
-                    if (current < target) {
-                        counter.textContent = Math.floor(current) + '+';
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target + '+';
-                    }
-                };
-                updateCounter();
-            });
-        }
+// Trigger counter when page loads
+window.addEventListener('load', () => {
+    // Delay slightly to ensure DOM is ready
+    setTimeout(() => {
+        animateCounters();
+    }, 500);
+});
+
+// Also trigger when scrolling to hero section
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statsObserver.observe(heroStats);
+}
 
         // Scroll reveal animation
         const revealElements = document.querySelectorAll('.reveal');
