@@ -2201,6 +2201,26 @@ if (heroStats) {
     statsObserver.observe(heroStats);
 }
 
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    if (entry.target.closest('.hero')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, { 
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
         // Trigger counter on load for hero section
         window.addEventListener('load', () => {
             const heroStats = document.querySelector('.hero-stats');
