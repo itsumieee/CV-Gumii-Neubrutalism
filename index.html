@@ -1521,6 +1521,90 @@
             transform: translateX(0);
         }
 
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+            border-top: var(--border-thick);
+            border-bottom: var(--border-thick);
+        }
+
+        .testimonials .section-title {
+            color: var(--dark);
+            -webkit-text-stroke: 0;
+        }
+
+        .testimonials .section-label {
+            background: var(--hot-pink);
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border: var(--border-thick);
+            padding: 30px;
+            box-shadow: var(--shadow-offset);
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px var(--dark);
+        }
+
+        .testimonial-stars {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FFE600, #FF3CAC);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 2px solid var(--dark);
+        }
+
+        .testimonial-info h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-info p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero {
@@ -1541,12 +1625,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .stream-container {
-                grid-template-columns: 1fr;
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .social-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .contact-grid {
@@ -1571,24 +1655,60 @@
 
         @media (max-width: 768px) {
             .section {
-                padding: 60px 25px;
+                padding: 50px 20px;
             }
 
             .hero-left {
-                padding: 50px 25px;
+                padding: 40px 20px;
+            }
+
+            .hero {
+                padding-top: 72px;
+                min-height: auto;
             }
 
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero-badge {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+            }
+
+            .hero-desc {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-neu {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
             }
 
             .hero-image-wrapper {
-                width: 280px;
-                height: 360px;
+                width: 100%;
+                height: 300px;
+                border-radius: 0;
             }
 
             .section-title {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+            }
+
+            .section-label {
+                font-size: 0.65rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
 
             .nav-links {
@@ -1600,7 +1720,13 @@
                 background: var(--bg-cream);
                 border-bottom: var(--border-thick);
                 flex-direction: column;
-                padding: 20px;
+                padding: 15px;
+                z-index: 1000;
+            }
+
+            .nav-links a {
+                padding: 12px 10px;
+                font-size: 0.85rem;
             }
 
             .nav-links.active {
@@ -1612,7 +1738,7 @@
             }
 
             .navbar-inner {
-                padding: 15px 25px;
+                padding: 12px 15px;
             }
 
             .hero-floating-tag {
@@ -1627,9 +1753,139 @@
                 grid-template-columns: 1fr;
             }
 
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-inner {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .marquee-top {
+                font-size: 0.75rem;
+            }
+
+            .scroll-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                box-shadow: 4px 4px 0px #1a1a1a;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-inner {
+                padding: 10px 12px;
+            }
+
+            .nav-logo {
+                font-size: 1.3rem;
+            }
+
+            .hero-left {
+                padding: 30px 15px;
+            }
+
+            .section {
+                padding: 40px 15px;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-desc {
+                font-size: 0.95rem;
+                max-width: 100%;
+            }
+
+            .hero-badge {
+                font-size: 0.65rem;
+                padding: 5px 12px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .skill-card {
+                padding: 20px 15px;
+            }
+
+            .project-thumb {
+                height: 150px;
+                font-size: 2.5rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .btn-submit {
+                width: 100%;
+                padding: 14px 20px;
+                font-size: 0.85rem;
+            }
+
+            .social-card {
+                padding: 30px 20px;
+            }
+
+            .social-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .social-icon svg {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-name {
+                font-size: 1.4rem;
+            }
+
+            .footer-text {
+                font-size: 0.7rem;
+            }
+
+            .marquee-content span {
+                margin: 0 15px;
+            }
+
+            .btn-neu {
+                padding: 12px 20px;
+                font-size: 0.85rem;
+                gap: 5px;
             }
         }
 
@@ -1686,8 +1942,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#livestream">Live</a></li>
-                <li><a href="#social">Social</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1703,15 +1958,13 @@
     <div class="marquee-top" style="margin-top: 72px;">
         <div class="marquee-content">
             <span>Available for Freelance</span>
-            <span>Content Creator</span>
             <span>Full Stack Developer</span>
             <span>UI/UX Designer</span>
-            <span>Live Streamer</span>
+            <span>Portfolio Developer</span>
             <span>Available for Freelance</span>
-            <span>Content Creator</span>
             <span>Full Stack Developer</span>
             <span>UI/UX Designer</span>
-            <span>Live Streamer</span>
+            <span>Portfolio Developer</span>
         </div>
     </div>
 
@@ -1894,61 +2147,54 @@
         </div>
     </section>
 
-    <!-- LIVE STREAM -->
-    <section class="section livestream" id="livestream">
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials" id="testimonials">
         <div class="section-header reveal">
-            <div class="section-label">// 🔴 LIVE</div>
-            <h2 class="section-title">Live <span class="outline">Stream</span></h2>
+            <div class="section-label">// 004</div>
+            <h2 class="section-title">Client <span class="outline">Testimonials</span></h2>
         </div>
-        <div class="stream-container">
-            <div class="stream-player reveal-left">
-                <div class="stream-status">
-                    <span class="live-dot"></span>
-                    LIVE
+        <div class="testimonials-grid stagger">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Gumii adalah developer yang luar biasa! Website yang dibuat sangat responsif dan loading speed cepat. Recommended banget!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨</div>
+                    <div class="testimonial-info">
+                        <h4>Ahmad Reza</h4>
+                        <p>CEO Tech Startup</p>
+                    </div>
                 </div>
-                <div class="stream-viewers">👁 1.2K Viewers</div>
-                <div class="stream-placeholder">
-                    <div class="play-btn">▶</div>
-                    <p>Embed Twitch / YouTube Stream</p>
-                </div>
-                <!-- 
-                    GANTI DENGAN EMBED STREAM KAMU:
-                    <iframe src="https://player.twitch.tv/?channel=YOUR_CHANNEL&parent=yoursite.com" allowfullscreen></iframe>
-                    atau
-                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-                -->
             </div>
-            <div class="stream-sidebar reveal-right">
-                <div class="stream-chat">
-                    <div class="chat-header">💬 Live Chat</div>
-                    <div class="chat-message"><span class="chat-user">User1:</span> keren banget streamnya! 🔥</div>
-                    <div class="chat-message"><span class="chat-user">User2:</span> mantap bro, lanjutkan!</div>
-                    <div class="chat-message"><span class="chat-user">User3:</span> tutorialnya sangat membantu 👏</div>
-                    <div class="chat-message"><span class="chat-user">User4:</span> gas terus bang!</div>
-                    <div class="chat-message"><span class="chat-user">User5:</span> follow dari tiktok nih 😄</div>
-                    <div class="chat-message"><span class="chat-user">User6:</span> auto subscribe!</div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Desainnya modern, UI/UX sangat user-friendly. Gumii benar-benar memahami kebutuhan project saya. Kerja sama yang sangat smooth!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Siti Aminah</h4>
+                        <p>Founder Design Agency</p>
+                    </div>
                 </div>
-                <div class="stream-schedule">
-                    <div class="schedule-title">📅 Jadwal Stream</div>
-                    <div class="schedule-item">
-                        <span class="schedule-day">Senin</span>
-                        <span class="schedule-time">20:00 - 23:00</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Profesional, tepat waktu, dan komunikasi yang sangat baik. Website e-commerce yang dibuat untuk toko kami meningkatkan penjualan 40%!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨</div>
+                    <div class="testimonial-info">
+                        <h4>Budi Santoso</h4>
+                        <p>Owner E-Commerce</p>
                     </div>
-                    <div class="schedule-item">
-                        <span class="schedule-day">Rabu</span>
-                        <span class="schedule-time">20:00 - 23:00</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-day">Jumat</span>
-                        <span class="schedule-time">21:00 - 00:00</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-day">Sabtu</span>
-                        <span class="schedule-time">19:00 - 23:00</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-day">Minggu</span>
-                        <span class="schedule-time">15:00 - 18:00</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Portfolio design Gumii membuat brand kami terlihat lebih profesional. ROI dari project ini sangat memuaskan. Terima kasih!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Diana Wijaya</h4>
+                        <p>Marketing Manager</p>
                     </div>
                 </div>
             </div>
@@ -1956,7 +2202,7 @@
     </section>
 
     <!-- SOCIAL MEDIA -->
-    <section class="section social" id="social">
+    <section class="section social" id="social" style="display: none;">
         <div class="section-header reveal">
             <div class="section-label">// 004</div>
             <h2 class="section-title">Find Me <span class="outline">Online</span></h2>
@@ -2070,21 +2316,21 @@
                     <div class="contact-icon">📧</div>
                     <div class="contact-detail">
                         <h4>Email</h4>
-                        <p>hello@yourname.com</p>
+                        <p><a href="mailto:gumicool2@gmail.com" style="color: inherit; text-decoration: none;">gumicool2@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
                     <div class="contact-detail">
-                        <h4>Phone</h4>
-                        <p>+62 812 3456 7890</p>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/6282318079177" target="_blank" style="color: inherit; text-decoration: none;">+62 823 1807 9177</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📍</div>
                     <div class="contact-detail">
                         <h4>Location</h4>
-                        <p>Jakarta, Indonesia</p>
+                        <p>Bandung, Jawa Barat</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -2095,22 +2341,22 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
+            <form class="contact-form reveal-right" id="contactForm" action="https://formspree.io/f/xyzabcde" method="POST">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" placeholder="Nama kamu..." required>
+                    <input type="text" name="name" placeholder="Nama kamu..." required>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" placeholder="email@kamu.com" required>
+                    <input type="email" name="email" placeholder="email@kamu.com" required>
                 </div>
                 <div class="form-group">
                     <label>Subject</label>
-                    <input type="text" placeholder="Subject pesan...">
+                    <input type="text" name="subject" placeholder="Subject pesan...">
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea placeholder="Tulis pesan kamu..." required></textarea>
+                    <textarea name="message" placeholder="Tulis pesan kamu..." required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">🚀 Kirim Pesan</button>
             </form>
@@ -2245,18 +2491,14 @@
         counters.forEach(counter => counterObserver.observe(counter));
 
         // ===== FORM SUBMIT =====
-        function handleSubmit(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('.btn-submit');
-            btn.textContent = '✅ Pesan Terkirim!';
-            btn.style.background = '#7BFF33';
-            btn.style.color = '#1a1a1a';
-            setTimeout(() => {
-                btn.textContent = '🚀 Kirim Pesan';
-                btn.style.background = '';
-                btn.style.color = '';
-                e.target.reset();
-            }, 3000);
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const btn = this.querySelector('.btn-submit');
+                btn.textContent = '⏳ Mengirim...';
+                btn.style.background = '#FFE600';
+                btn.style.color = '#1a1a1a';
+            });
         }
 
         // ===== SMOOTH SCROLL FOR NAV LINKS =====
